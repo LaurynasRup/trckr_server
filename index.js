@@ -27,6 +27,6 @@ app.use(express.json());
 app.use('/api/users', authRoute);
 app.use('/api/leagues', leagueRoute);
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
 	console.log('server running');
 });
